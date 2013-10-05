@@ -4,16 +4,14 @@
  */
 package memory;
 
-import javax.swing.JButton;
+//import javax.swing.JButton;
 
-/**
- *
- * @author presleeadayton
- */
+
 public class start {
-    
+    String startButton = "This will be the start button.";
 
 public void startGame(){ 
-    JButton button2 = new JButton("Start");
+    //JButton button2 = new JButton("Start");
+    System.out.println(startButton);
     }
 }

@@ -6,10 +6,6 @@ package memory;
 
 import java.util.Scanner;
 
-/**
- *
- * @author vickirammell
- */
 public class Memory {
     
     //Instance variables
@@ -27,6 +23,18 @@ public class Memory {
         myGame.displayHelp();
         start game = new start();
         game.startGame();
+        board discription = new board();
+        discription.displayboard();
+        cards gameCards = new cards();
+        gameCards.showCards();
+        images showImages = new images();
+        showImages.cardImages();
+        score displayScore = new score();
+        displayScore.displayScore();
+        matches displayMatches = new matches();
+        displayMatches.displaymatches();
+        end finalScreen = new end();
+        finalScreen.finalScreen();
     }
     public void getName(){ 
         Scanner input = new Scanner(System.in);
