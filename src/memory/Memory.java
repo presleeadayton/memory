@@ -29,12 +29,16 @@ public class Memory {
         gameCards.showCards();
         images showImages = new images();
         showImages.cardImages();
+        cards matchesLeft = new cards();
+        matchesLeft.matchesLeft();
         score displayScore = new score();
         displayScore.displayScore();
         matches displayMatches = new matches();
         displayMatches.displaymatches();
+        score tellScore = new score();
+        tellScore.calculateScore();
         end finalScreen = new end();
-        finalScreen.finalScreen();
+        finalScreen.calculateFinalScore();
     }
     public void getName(){ 
         Scanner input = new Scanner(System.in);

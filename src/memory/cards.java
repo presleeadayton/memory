@@ -10,4 +10,16 @@ public class cards {
     public void showCards() {
          System.out.println(cards);
     }
+    public void matchesLeft(){
+        short alreadyMatched, totalNumber;
+        int cardsLeft;
+        String matches = null;
+        alreadyMatched = 8;
+        totalNumber = 3;
+        cardsLeft = (int) (alreadyMatched + totalNumber/totalNumber);
+        if (cardsLeft == 9){
+            matches = "There are \n \t" + cardsLeft + " cards left.";
+        }
+        System.out.println(matches);
+    }
 }
