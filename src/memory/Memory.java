@@ -11,12 +11,9 @@ public class Memory {
     //Instance variables
     String name;
     String instructions = "This is the game of Memory! \n\n"
-            + "Players take turns, one at a time.\n" +
-"On each turn, a player turns over two cards (one at a time) and keeps them if they match.\n" +
-"If they successfully match a pair of numbers, that player also gets to take another turn.\n" +
-"Players continue taking turns until the last match is found.\n" +
-"Each player then adds up the pairs/matches they got. Each pair is worth 1 point.\n" +
-"The player with the most pairs/matches; WINS.";
+            + "The player turns over two cards at a time\n" +
+"trying to match all cards before the time runs out. If all cards are successfully matched\n" +
+"within the time limit, the player progresses to the next level.";
     public static void main(String[] args) {
         Memory myGame = new Memory();
         myGame.getName();
@@ -27,6 +24,7 @@ public class Memory {
         discription.displayboard();
         cards gameCards = new cards();
         gameCards.showCards();
+        myGame.displayCardMenu(); //Preslee created displayCardMenu.
         images showImages = new images();
         showImages.cardImages();
         cards matchesLeft = new cards();
@@ -58,6 +56,17 @@ public class Memory {
         if ("Y".equals(this.name)){
             HelpMenuView HelpMenu = new HelpMenuView();
         HelpMenu.getInput();
+        }  
+    }
+    
+    //Preslee created displayCardMenu.
+    public void displayCardMenu(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Do you want to view the card menu? \n Y / N");
+        this.name = input.next();
+        if ("Y".equals(this.name)){
+            CardMenuView CardMenu = new CardMenuView();
+        CardMenu.getInput();
         }
     }
 }
