@@ -1,30 +1,27 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package memory;
 
 import java.util.Scanner;
 
-public class HelpMenuView {
-            
-   
+/**
+ *
+ * @author nathaniallarson
+ */
+public class BoardMenuView {
+    
     private final static String[][] menuItems = {
-        {"B", "The board"}, 
-        {"G", "The memory game"},
-        {"C", "The cards"},
-        {"S", "The score"},
-        {"H", "The how to play"},
-        {"CM", "The Card Menu"},
-        {"BM", "The Board Menu"},
-        {"Q", "Quit Help"}        
+        {"P", "Pause Game"}, 
+        {"R", "Restart Game"},
+        {"C", "Change Card Type"},
+        {"H", "Help Menu"}, 
+        {"Q", "Quit Menu"}        
     };
     
     // Create instance of the HelpMenuControl (action) class
-    private HelpMenuControl helpMenuControl = new HelpMenuControl();
-    private BoardMenuView test = new BoardMenuView();
+    private BoardMenuControl BoardMenuControl = new BoardMenuControl();
+    private CardMenuView CardMenuView = new CardMenuView();
+    private HelpMenuView HelpMenuView = new HelpMenuView();
     // default constructor
-    public HelpMenuView() {
+    public BoardMenuView() {
         
     } 
     
@@ -38,26 +35,17 @@ public class HelpMenuView {
             // get commaned entered
             String command = this.getCommand();
             switch (command) {
-                case "B":
-                    this.helpMenuControl.displayBoardHelp();
+                case "P":
+                    this.BoardMenuControl.pauseGame();
                     break;
-                case "G":
-                    this.helpMenuControl.displayGameHelp();
+                case "R":
+                    this.BoardMenuControl.restartGame();
                     break;
                 case "C":
-                    this.helpMenuControl.displayCardHelp();
-                    break;                  
-                case "S":
-                    this.helpMenuControl.displayScoreHelp();
+                    this.CardMenuView.getInput();
                     break;
                 case "H":
-                    this.helpMenuControl.displayHowToPlayHelp();
-                    break;
-                case "CM":
-                    this.cardMenuView.getInput();
-                    break;
-                 case "BM":
-                    this.boardMenuView.getInput();
+                    this.HelpMenuView.getInput();
                     break;
                 case "Q": 
                     return "QUIT";
@@ -73,7 +61,7 @@ public class HelpMenuView {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
+        for (int i = 0; i < BoardMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
@@ -104,14 +92,14 @@ public class HelpMenuView {
     
     // determines if the command is valid
     private boolean validCommand(String command) {
-        String[][] items = HelpMenuView.menuItems;
+        String[][] items = BoardMenuView.menuItems;
 
-        for (String[] item : HelpMenuView.menuItems) {
+        for (String[] item : BoardMenuView.menuItems) {
             if (item[0].equals(command)) {
                 return true;
             }
         }
         return false;
     }
-            
-}
+    
+} 

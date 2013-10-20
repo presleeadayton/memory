@@ -5,7 +5,7 @@ package memory;
 
 
 public class CardMenuControl {
-    
+
     public CardMenuControl() {
         
     } 

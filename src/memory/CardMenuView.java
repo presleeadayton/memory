@@ -10,13 +10,16 @@ public class CardMenuView {
     private final static String[][] menuItems = {
         {"I", "Images"}, 
         {"L", "Letters"},
-        {"N", "Numbers"},        
+        {"N", "Numbers"},
+        {"B", "Board Menu"},
+        {"H", "Help Menu"},
         {"Q", "Quit Menu"}        
     };
     
+    
     // Create instance of the HelpMenuControl (action) class
     private CardMenuControl cardMenuControl = new CardMenuControl();
-    
+    private HelpMenuView HelpMenuView = new HelpMenuView();
     // default constructor
     public CardMenuView() {
         
@@ -40,7 +43,7 @@ public class CardMenuView {
                     break;
                 case "N":
                     this.cardMenuControl.displayCardNumbers();
-                    break;                  
+                    break;              
                 case "Q": 
                     return "QUIT";
             }

@@ -38,6 +38,7 @@ public class Memory {
         end finalScreen = new end();
         finalScreen.calculateFinalScore();
         myGame.displayHelp();
+        myGame.displayBoardOptions();
     }
     public void getName(){ 
         Scanner input = new Scanner(System.in);
@@ -68,5 +69,15 @@ public class Memory {
             CardMenuView CardMenu = new CardMenuView();
         CardMenu.getInput();
         }
+    }
+     //Nathan created displayBoardOptions.
+    public void displayBoardOptions(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("View Board Menu? \n Y / N");
+        this.name = input.next();
+        if ("Y".equals(this.name)){
+            BoardMenuView BoardMenu = new BoardMenuView();
+        BoardMenu.getInput();
+        }  
     }
 }
