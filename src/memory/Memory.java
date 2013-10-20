@@ -1,12 +1,11 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package memory;
 
 import java.util.Scanner;
 
 public class Memory {
+    private static final HelpMenuView helpMenu = new HelpMenuView();
+    private static final CardMenuView cardMenu = new CardMenuView();
+    private static final BoardMenuView boardMenu = new BoardMenuView();
     
     //Instance variables
     String name;
@@ -39,6 +38,15 @@ public class Memory {
         finalScreen.calculateFinalScore();
         myGame.displayHelp();
         myGame.displayBoardOptions();
+    }
+    public static HelpMenuView getHelpMenu(){
+        return Memory.helpMenu;
+    }
+    public static CardMenuView getCardMenu(){
+        return Memory.cardMenu;
+    }
+     public static BoardMenuView getBoardMenu(){
+        return Memory.boardMenu;
     }
     public void getName(){ 
         Scanner input = new Scanner(System.in);

@@ -60,5 +60,18 @@ public class HelpMenuControl {
         System.out.println(
         "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
-    
+   public void displayHelpMenu() {
+        HelpMenuView helpMenu = Memory.getHelpMenu();
+        helpMenu.getInput();
+        
+    }
+    public void displayCardMenu() {
+        CardMenuView cardMenu = Memory.getCardMenu();
+        cardMenu.getInput();
+        
+    }
+    public void displayBoardMenu() {
+        BoardMenuView boardMenu = Memory.getBoardMenu();
+        boardMenu.getInput();
+    } 
 }

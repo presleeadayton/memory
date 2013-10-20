@@ -19,7 +19,8 @@ public class CardMenuView {
     
     // Create instance of the HelpMenuControl (action) class
     private CardMenuControl cardMenuControl = new CardMenuControl();
-    private HelpMenuView HelpMenuView = new HelpMenuView();
+    private HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private BoardMenuControl boardMenuControl = new BoardMenuControl();
     // default constructor
     public CardMenuView() {
         
@@ -43,7 +44,13 @@ public class CardMenuView {
                     break;
                 case "N":
                     this.cardMenuControl.displayCardNumbers();
-                    break;              
+                    break; 
+                case "B":
+                    boardMenuControl.displayBoardMenu();
+                    break;
+                case "H":
+                    helpMenuControl.displayHelpMenu();
+                    break;
                 case "Q": 
                     return "QUIT";
             }

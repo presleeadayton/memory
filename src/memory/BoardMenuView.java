@@ -17,9 +17,10 @@ public class BoardMenuView {
     };
     
     // Create instance of the HelpMenuControl (action) class
-    private BoardMenuControl BoardMenuControl = new BoardMenuControl();
-    private CardMenuView CardMenuView = new CardMenuView();
-    private HelpMenuView HelpMenuView = new HelpMenuView();
+    private CardMenuControl cardMenuControl = new CardMenuControl();
+    private HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private BoardMenuControl boardMenuControl = new BoardMenuControl();
+    
     // default constructor
     public BoardMenuView() {
         
@@ -36,16 +37,16 @@ public class BoardMenuView {
             String command = this.getCommand();
             switch (command) {
                 case "P":
-                    this.BoardMenuControl.pauseGame();
+                    this.boardMenuControl.pauseGame();
                     break;
                 case "R":
-                    this.BoardMenuControl.restartGame();
+                    this.boardMenuControl.restartGame();
                     break;
                 case "C":
-                    this.CardMenuView.getInput();
+                    cardMenuControl.displayCardMenu();
                     break;
                 case "H":
-                    this.HelpMenuView.getInput();
+                    boardMenuControl.displayHelpMenu();
                     break;
                 case "Q": 
                     return "QUIT";
