@@ -25,6 +25,10 @@ public class PickedCardsView {
            
             // no marker entered?
             if (pickedCard == null  || pickedCard.length() < 2 || pickedCard.length() > 2) {
+                System.out.println(
+                    "Enter two characters."
+                    + " Example: A1 or 1A");
+            
                 continue;
             }
             
