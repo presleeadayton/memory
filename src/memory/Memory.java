@@ -26,6 +26,8 @@ public class Memory {
         myGame.displayCardMenu(); //Preslee created displayCardMenu.
         images showImages = new images();
         showImages.cardImages();
+        PickedCardsView cards = new PickedCardsView();
+        cards.getInput();
         cards matchesLeft = new cards();
         matchesLeft.matchesLeft();
         score displayScore = new score();
@@ -37,7 +39,7 @@ public class Memory {
         end finalScreen = new end();
         finalScreen.calculateFinalScore();
         myGame.displayHelp();
-        myGame.displayBoardOptions();
+        myGame.displayBoardOptions(); 
     }
     public static HelpMenuView getHelpMenu(){
         return Memory.helpMenu;
@@ -86,6 +88,6 @@ public class Memory {
         if ("Y".equals(this.name)){
             BoardMenuView BoardMenu = new BoardMenuView();
         BoardMenu.getInput();
-        }  
+        }
     }
 }
