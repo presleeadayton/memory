@@ -27,7 +27,7 @@ public class Memory {
         images showImages = new images();
         showImages.cardImages();
         PickedCardsView cards = new PickedCardsView();
-        cards.getInput();
+        cards.cardsPicked();
         cards matchesLeft = new cards();
         matchesLeft.matchesLeft();
         score displayScore = new score();
