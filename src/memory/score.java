@@ -22,4 +22,20 @@ public class score {
         }
         System.out.println(tellScore);
     }
+  
+    public void averageTime() {
+        
+        int timeStored[] = {1, 2, 1, 4};
+
+            int sum = 0;
+            int average = 0;
+            for(int i : timeStored){
+                sum = sum + i;
+
+            }
+              average = sum / 2;
+
+            System.out.println("Your average completion time is: " + average);
+
+    }
 }

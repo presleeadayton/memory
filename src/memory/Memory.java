@@ -35,9 +35,9 @@ public class Memory {
         score displayScore = new score();
         displayScore.displayScore();
         matches displayMatches = new matches();
-        displayMatches.displaymatches();
+        displayMatches.matchesMatched();
         score tellScore = new score();
-        tellScore.calculateScore();
+        tellScore.averageTime();
         end finalScreen = new end();
         finalScreen.calculateFinalScore();
         myGame.displayHelp();
