@@ -5,6 +5,8 @@
 package memory;
 
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class PickedCardsView {
     
@@ -12,6 +14,7 @@ public class PickedCardsView {
 
         String pickedCard = null;
         Scanner in = new Scanner(System.in);
+        
                 
         boolean valid = false; // flag to indicate if valid character entered
         while (!valid) {
@@ -340,5 +343,47 @@ public class PickedCardsView {
                             System.out.println("This card has already been matched.");
               }
           }   
+    }
+        public void storeInput(){
+            int i;
+            int j = 0;
+            int k = 0;
+            Scanner in = new Scanner(System.in);
+            String tempInput = null;
+                String board[][] = new String [2][2];
+
+		for(i=1; i<3; i=i+1){
+                    System.out.println("Please enter choice" + " " + String.valueOf(i)
+                            + ".");
+			tempInput = in.nextLine();
+				board[j][k] = "choice " + String.valueOf(i);
+				board[j][k + 1] = tempInput;
+					j = j + 1;	
+            }
+                
+	sortInput(board);		
+     }
+        
+        public void sortInput(String[][] board){
+            int i = 1;
+            int j = 0;
+               String str1 = board[0][1];
+               String str2 = board[1][1];
+               int result = str1.compareTo(str2);
+               if(result == 0){
+               }
+               else if(result < 0){
+                   board[1][1] = str1;
+                   board[0][1] = str2;
+               }
+               else{    
+               }
+                    for(i=0; i<board.length; i=i+1){
+			for(j=0; j<board.length; j=j+1){
+			
+				System.out.println(board[i][j]);	
+                                   
+            }
+        }
     }
 }

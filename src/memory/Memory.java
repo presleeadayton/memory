@@ -28,6 +28,8 @@ public class Memory {
         showImages.cardImages();
         PickedCardsView cards = new PickedCardsView();
         cards.cardsPicked();
+        PickedCardsView sortArray = new PickedCardsView();
+        sortArray.storeInput();
         cards matchesLeft = new cards();
         matchesLeft.matchesLeft();
         score displayScore = new score();
