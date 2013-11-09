@@ -24,12 +24,12 @@ public class end {
         if (finalScore == 11){
             tellScore = "Congratulations player one! \n \t Your score is: " + finalScore;
         }
-        System.out.println(tellScore);
+        //System.out.println(tellScore);
         
         if (finalScoreTwo == 23){
             tellScoreTwo = "Congratulations player two! \n \t Your score is: " + finalScoreTwo;
         }
-        System.out.println(tellScoreTwo);
+        //System.out.println(tellScoreTwo);
     }
     
 }

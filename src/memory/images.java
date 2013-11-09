@@ -8,6 +8,6 @@ package memory;
 public class images {
     String showImages = "These will be the images on our game cards.";
     public void cardImages() {
-         System.out.println(showImages);
+         //System.out.println(showImages);
     }
 }

@@ -12,6 +12,6 @@ public class start {
 
 public void startGame(){ 
     //JButton button2 = new JButton("Start");
-    System.out.println(startButton);
+    //System.out.println(startButton);
     }
 }

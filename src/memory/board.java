@@ -7,6 +7,6 @@ package memory;
 public class board {
     String boardColor = "Our gameboard will be green.";
     public void displayboard() {
-         System.out.println(boardColor);
+        //System.out.println(boardColor);
     }
 }

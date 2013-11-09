@@ -22,14 +22,14 @@ public class Memory {
         board discription = new board();
         discription.displayboard();
         cards gameCards = new cards();
-        gameCards.showCards();
         myGame.displayCardMenu(); //Preslee created displayCardMenu.
+        gameCards.showCards();
         images showImages = new images();
         showImages.cardImages();
         PickedCardsView cards = new PickedCardsView();
         cards.cardsPicked();
         PickedCardsView sortArray = new PickedCardsView();
-        sortArray.storeInput();
+        //sortArray.storeInput();
         cards matchesLeft = new cards();
         matchesLeft.matchesLeft();
         score displayScore = new score();
