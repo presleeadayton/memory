@@ -92,7 +92,7 @@ public class PickedCardsView {
             int cardSpotOne = 0;
             int counter = 0;
             int q = 0;
-                    while(!"aaa".equals(alreadyMatched[23])){
+        while(!"aaa".equals(alreadyMatched[23])){
         cardPicked = getInput();
             tempValue[q] = cardPicked;
                 q = q + 1;

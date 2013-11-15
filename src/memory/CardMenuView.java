@@ -3,10 +3,14 @@
  */
 package memory;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class CardMenuView {
+public class CardMenuView implements Serializable {
     
+    /* We tried nesting right here but it broke the code on lines 44, 47, and 50. 
+     * private class CardMenuControl {
+    }*/
     private final static String[][] menuItems = {
         {"I", "Images"}, 
         {"L", "Letters"},
@@ -29,7 +33,7 @@ public class CardMenuView {
     // display the help menu and get the end users input selection
     public String getInput() {       
         
-        String gameStatus = "PLAYING";
+      String gameStatus = "PLAYING";
         do {
             this.display();
             
@@ -103,7 +107,31 @@ public class CardMenuView {
                 return true;
             }
         }
-        return false;
+        return false; 
+    }
+
+    public CardMenuControl getCardMenuControl() {
+        return cardMenuControl;
+    }
+
+    public void setCardMenuControl(CardMenuControl cardMenuControl) {
+        this.cardMenuControl = cardMenuControl;
+    }
+
+    public HelpMenuControl getHelpMenuControl() {
+        return helpMenuControl;
+    }
+
+    public void setHelpMenuControl(HelpMenuControl helpMenuControl) {
+        this.helpMenuControl = helpMenuControl;
+    }
+
+    public BoardMenuControl getBoardMenuControl() {
+        return boardMenuControl;
+    }
+
+    public void setBoardMenuControl(BoardMenuControl boardMenuControl) {
+        this.boardMenuControl = boardMenuControl;
     }
             
 }
