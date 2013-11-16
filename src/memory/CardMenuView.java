@@ -1,6 +1,3 @@
-/*
- *Preslee created CardMenuView.java
- */
 package memory;
 
 import java.io.Serializable;

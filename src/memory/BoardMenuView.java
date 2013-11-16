@@ -1,12 +1,9 @@
 package memory;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-/**
- *
- * @author nathaniallarson
- */
-public class BoardMenuView {
+public class BoardMenuView implements Serializable {
     
     private final static String[][] menuItems = {
         {"P", "Pause Game"}, 
@@ -25,6 +22,30 @@ public class BoardMenuView {
     public BoardMenuView() {
         
     } 
+
+    public CardMenuControl getCardMenuControl() {
+        return cardMenuControl;
+    }
+
+    public void setCardMenuControl(CardMenuControl cardMenuControl) {
+        this.cardMenuControl = cardMenuControl;
+    }
+
+    public HelpMenuControl getHelpMenuControl() {
+        return helpMenuControl;
+    }
+
+    public void setHelpMenuControl(HelpMenuControl helpMenuControl) {
+        this.helpMenuControl = helpMenuControl;
+    }
+
+    public BoardMenuControl getBoardMenuControl() {
+        return boardMenuControl;
+    }
+
+    public void setBoardMenuControl(BoardMenuControl boardMenuControl) {
+        this.boardMenuControl = boardMenuControl;
+    }
     
     // display the help menu and get the end users input selection
     public String getInput() {       

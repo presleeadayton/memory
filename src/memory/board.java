@@ -1,11 +1,19 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package memory;
 
-public class board {
-    String boardColor = "Our gameboard will be green.";
+import java.io.Serializable;
+
+public class board implements Serializable {
+    
+    public board(){
+    }
+    public String getBoardColor() {
+        return boardColor;
+    }
+
+    public void setBoardColor(String boardColor) {
+        this.boardColor = boardColor;
+    }
+    public static String boardColor = "Our gameboard will be green.";
     public void displayboard() {
         //System.out.println(boardColor);
     }

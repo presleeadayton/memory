@@ -1,11 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package memory;
 
+import java.io.Serializable;
 
-public class HelpMenuControl {
+
+public class HelpMenuControl implements Serializable {
     
     public HelpMenuControl() {
         
@@ -60,7 +58,7 @@ public class HelpMenuControl {
         System.out.println(
         "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
-   public void displayHelpMenu() {
+    public void displayHelpMenu() {
         HelpMenuView helpMenu = Memory.getHelpMenu();
         helpMenu.getInput();
         

@@ -1,9 +1,8 @@
 package memory;
 
-/**
- * @author nathaniallarson
- */
-public class BoardMenuControl {
+import java.io.Serializable;
+
+public class BoardMenuControl implements Serializable {
     
     public BoardMenuControl() {
         

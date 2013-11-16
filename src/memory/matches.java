@@ -1,7 +1,20 @@
 package memory;
 
+import java.io.Serializable;
 
-public class matches {
+
+public class matches implements Serializable {
+    
+    public matches(){
+    }
+    public String getShowMatches() {
+        return showMatches;
+    }
+
+    public void setShowMatches(String showMatches) {
+        this.showMatches = showMatches;
+    }
+    
     String showMatches = "This will keep track of cards that have been matched.";
     public void displaymatches() {
          System.out.println(showMatches);

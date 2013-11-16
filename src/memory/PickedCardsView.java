@@ -1,14 +1,21 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package memory;
 
+import java.io.Serializable;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class PickedCardsView {
+public class PickedCardsView implements Serializable {
+    
+   public PickedCardsView(){
+   }
+    public cards getCards() {
+        return cards;
+    }
+
+    public void setCards(cards cards) {
+        this.cards = cards;
+    }
     
     public String getInput() {
 
@@ -82,7 +89,6 @@ public class PickedCardsView {
     }
     
     private cards cards = new cards();
-    private end end = new end();
     public void cardsPicked(){
         long startTime = System.currentTimeMillis();
         String cardPicked;
@@ -136,23 +142,7 @@ public class PickedCardsView {
                    
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
-                  
-                   /* (LESSON 5 - individual assignment)
-                        for (int i = 0; i < 12; i = i + 1) { 
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
+                 
                 }   
                 else if("c1".equals(cardPicked) || "C1".equals(cardPicked) || 
                    "1c".equals(cardPicked) || "1C".equals(cardPicked) ||
@@ -164,23 +154,7 @@ public class PickedCardsView {
                    
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
-                    
-                /* (LESSON 5 - individual assignment)
-                    for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
+               
                 }   
                 else if("e1".equals(cardPicked) || "E1".equals(cardPicked) || 
                    "1e".equals(cardPicked) || "1E".equals(cardPicked) ||
@@ -192,52 +166,7 @@ public class PickedCardsView {
                    
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
-                   
-             /* (LESSON 5 - individual assignment)      
-                for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                
-               */
-                }   
-                  else if("a2".equals(cardPicked) || "A2".equals(cardPicked) || 
-                   "2a".equals(cardPicked) || "2A".equals(cardPicked) ||
-                   "b2".equals(cardPicked) || "B2".equals(cardPicked) || 
-                   "2b".equals(cardPicked) || "2B".equals(cardPicked)){
-                   x = 400;
-                   
-                   System.out.println(cardPicked + " is equal to " + x);
-                   
-                   cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
-                    
-                 /* (LESSON 5 - individual assignment)  
-                    for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
+             
                   }   
                  else if("c2".equals(cardPicked) || "C2".equals(cardPicked) || 
                    "2c".equals(cardPicked) || "2C".equals(cardPicked) ||
@@ -249,51 +178,7 @@ public class PickedCardsView {
                    
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
-                   
-                  /* (LESSON 5 - individual assignment) 
-                    for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
-                 }   
-                else if("e2".equals(cardPicked) || "E2".equals(cardPicked) || 
-                   "2e".equals(cardPicked) || "2E".equals(cardPicked) ||
-                   "f2".equals(cardPicked) || "F2".equals(cardPicked) || 
-                   "2f".equals(cardPicked) || "2F".equals(cardPicked)){
-                   x = 600;
-                   
-                   System.out.println(cardPicked + " is equal to " + x);
-                   
-                   cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
-                   
-              /* (LESSON 5 - individual assignment)     
-                for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
+                
                 } 
                 else if("a3".equals(cardPicked) || "A3".equals(cardPicked) || 
                    "3a".equals(cardPicked) || "3A".equals(cardPicked) ||
@@ -305,23 +190,7 @@ public class PickedCardsView {
                    
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
-                    
-              /* (LESSON 5 - individual assignment)     
-                for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
+            
                 }   
                 else if("c3".equals(cardPicked) || "C3".equals(cardPicked) || 
                    "3c".equals(cardPicked) || "3C".equals(cardPicked) ||
@@ -334,22 +203,6 @@ public class PickedCardsView {
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
                    
-              /* (LESSON 5 - individual assignment)
-                for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-               */
                 }   
                 else if("e3".equals(cardPicked) || "E3".equals(cardPicked) || 
                    "3e".equals(cardPicked) || "3E".equals(cardPicked) ||
@@ -361,23 +214,7 @@ public class PickedCardsView {
                    
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
-                    
-              /* (LESSON 5 - individual assignment)
-                for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
 
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
                 }   
                 else if("a4".equals(cardPicked) || "A4".equals(cardPicked) || 
                    "4a".equals(cardPicked) || "4A".equals(cardPicked) ||
@@ -389,23 +226,7 @@ public class PickedCardsView {
                    
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
-                    
-              /* (LESSON 5 - individual assignment)     
-                for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
+  
                 }   
                 else if("c4".equals(cardPicked) || "C4".equals(cardPicked) || 
                    "4c".equals(cardPicked) || "4C".equals(cardPicked) ||
@@ -418,22 +239,6 @@ public class PickedCardsView {
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
                     
-              /* (LESSON 5 - individual assignment)     
-                for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-                        }
-                */
                 }   
                 else if("e4".equals(cardPicked) || "E4".equals(cardPicked) || 
                    "4e".equals(cardPicked) || "4E".equals(cardPicked) ||
@@ -446,21 +251,6 @@ public class PickedCardsView {
                    cardValue[cardSpotOne] = x;
                    cardSpotOne = cardSpotOne + 1;
                    
-              /* (LESSON 5 - individual assignment)     
-                for (int i = 0; i < 12; i = i + 1) {
-	
-                        if(cardImages[i] == x){
-                            System.out.println("You have picked a card!");
-                                break;
-
-                        }
-                        else if(cardImages[i] != x){
-                            y = y + 1;
-                        }
-                    }
-                        if(y == 12){
-                            System.out.println("This card has already been matched.");
-              } */
           }
                 if (cardValue[0] == cardValue[1]){
            
@@ -487,7 +277,7 @@ public class PickedCardsView {
                 long elapsedTime = endTime - startTime; 
                 System.out.println("The game is over. This is your time " + elapsedTime + ".");
 }            
-        public void storeInput(){
+        private void storeInput(){
             int i;
             int j = 0;
             int k = 0;
@@ -507,7 +297,7 @@ public class PickedCardsView {
 	sortInput(board);		
      }
         
-        public void sortInput(String[][] board){
+        private void sortInput(String[][] board){
             int i = 1;
             int j = 0;
                String str1 = board[0][1];

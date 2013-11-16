@@ -1,10 +1,9 @@
-/*
- * Preslee created CardMenuControl.java
- */
 package memory;
 
+import java.io.Serializable;
 
-public class CardMenuControl {
+
+public class CardMenuControl implements Serializable {
 
     public CardMenuControl() {
         

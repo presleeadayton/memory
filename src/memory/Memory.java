@@ -1,15 +1,16 @@
 package memory;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
-public class Memory {
+public class Memory implements Serializable {
     private static final HelpMenuView helpMenu = new HelpMenuView();
     private static final CardMenuView cardMenu = new CardMenuView();
     private static final BoardMenuView boardMenu = new BoardMenuView();
     
     //Instance variables
-    String name;
-    String instructions = "This is the game of Memory! \n\n"
+    public static String name;
+    public static String instructions = "This is the game of Memory! \n\n"
             + "The player turns over two cards at a time\n" +
 "trying to match all cards before the time runs out. If all cards are successfully matched\n" +
 "within the time limit, the player progresses to the next level.";
@@ -29,17 +30,12 @@ public class Memory {
         PickedCardsView cards = new PickedCardsView();
         cards.cardsPicked();
         PickedCardsView sortArray = new PickedCardsView();
-        //sortArray.storeInput();
-        cards matchesLeft = new cards();
-        matchesLeft.matchesLeft();
         score displayScore = new score();
         displayScore.displayScore();
         matches displayMatches = new matches();
         displayMatches.matchesMatched();
         score tellScore = new score();
         tellScore.averageTime();
-        end finalScreen = new end();
-        finalScreen.calculateFinalScore();
         myGame.displayHelp();
         myGame.displayBoardOptions(); 
     }
@@ -49,7 +45,7 @@ public class Memory {
     public static CardMenuView getCardMenu(){
         return Memory.cardMenu;
     }
-     public static BoardMenuView getBoardMenu(){
+    public static BoardMenuView getBoardMenu(){
         return Memory.boardMenu;
     }
     public void getName(){ 
@@ -91,5 +87,17 @@ public class Memory {
             BoardMenuView BoardMenu = new BoardMenuView();
         BoardMenu.getInput();
         }
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getInstructions() {
+        return instructions;
+    }
+
+    public void setInstructions(String instructions) {
+        this.instructions = instructions;
     }
 }
