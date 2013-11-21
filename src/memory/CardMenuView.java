@@ -3,7 +3,7 @@ package memory;
 import java.io.Serializable;
 import java.util.Scanner;
 
-public class CardMenuView implements Serializable {
+public class CardMenuView extends Menu implements Serializable {
     
     /* We tried nesting right here but it broke the code on lines 44, 47, and 50. 
      * private class CardMenuControl {
@@ -24,10 +24,11 @@ public class CardMenuView implements Serializable {
     private BoardMenuControl boardMenuControl = new BoardMenuControl();
     // default constructor
     public CardMenuView() {
-        
+        super(CardMenuView.menuItems);
     } 
     
     // display the help menu and get the end users input selection
+    @Override
     public String getInput() {       
         
       String gameStatus = "PLAYING";
@@ -60,53 +61,7 @@ public class CardMenuView implements Serializable {
         
          return gameStatus;
     }
-
-        // displays the help menu
-    public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < CardMenuView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }
-
- 
-    // retrieves the command entered by the end user
-    protected final String getCommand() {
-
-        Scanner inFile = new Scanner(System.in);
-        String command;
-        boolean valid = false;
-        do {
-
-            command = inFile.nextLine();
-            command = command.trim().toUpperCase();
-            valid = validCommand(command);
-            if (!valid) {
-                new MemoryError().displayError("Invalid command. Please enter a valid command.");
-                continue;
-            }
-                
-        } while (!valid);
-        
-        return command;
-    }
-     
     
-    // determines if the command is valid
-    private boolean validCommand(String command) {
-        String[][] items = CardMenuView.menuItems;
-
-        for (String[] item : CardMenuView.menuItems) {
-            if (item[0].equals(command)) {
-                return true;
-            }
-        }
-        return false; 
-    }
-
     public CardMenuControl getCardMenuControl() {
         return cardMenuControl;
     }
