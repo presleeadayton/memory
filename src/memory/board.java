@@ -2,10 +2,12 @@ package memory;
 
 import java.io.Serializable;
 
-public class board implements Serializable {
+public class board extends SuperExamplePreslee implements Serializable {
     
     public board(){
     }
+    
+    @Override
     public String getBoardColor() {
         return boardColor;
     }

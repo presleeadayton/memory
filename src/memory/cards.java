@@ -3,10 +3,12 @@ package memory;
 import java.io.Serializable;
 
 
-public class cards implements Serializable {
+public class cards extends SuperExampleNathan implements Serializable {
     
     public cards(){
     }
+    
+    @Override
     public String getCards() {
         return cards;
     }
