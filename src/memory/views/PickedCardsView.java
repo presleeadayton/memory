@@ -6,6 +6,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import memory.MemoryError;
 import memory.cards;
+import memory.customExceptionClasses.MenuException;
 
 public class PickedCardsView implements Serializable {
     
@@ -19,7 +20,7 @@ public class PickedCardsView implements Serializable {
         this.cards = cards;
     }
     
-    public String getInput() {
+    public String getInput() throws MenuException {
 
         String pickedCard = null;
         Scanner in = new Scanner(System.in);
@@ -44,9 +45,33 @@ public class PickedCardsView implements Serializable {
                 continue;
             }
             
+            try{int choicelength = pickedCard.length();
+                int randomnumber = 2;
+                randomnumber = randomnumber/choicelength;
+            
+            }
+            catch (ArithmeticException exc){throw new MenuException("Please enter a card set.");}
             
             char firstCharacter=pickedCard.charAt(0);
             char secondCharacter=pickedCard.charAt(1);
+            
+            try{if(firstCharacter=='A' || firstCharacter=='a' || firstCharacter=='B' 
+              || firstCharacter=='b' || firstCharacter=='C' || firstCharacter=='c' 
+              || firstCharacter=='D' || firstCharacter=='d' || firstCharacter=='E' 
+              || firstCharacter=='e' || firstCharacter=='F' || firstCharacter=='f'){
+            
+            int numbercheck = secondCharacter/1;
+                
+            }else if(secondCharacter=='1' || secondCharacter=='2' 
+              || secondCharacter=='3' || secondCharacter=='4'){
+            
+            int numbercheck = secondCharacter/1;
+            
+            }
+            
+            }
+            catch(ArithmeticException exc){throw new MenuException("Please enter a valid set of cards.");}
+            
 
             if(firstCharacter=='A' || firstCharacter=='a' || firstCharacter=='B' 
               || firstCharacter=='b' || firstCharacter=='C' || firstCharacter=='c' 
@@ -59,7 +84,6 @@ public class PickedCardsView implements Serializable {
             valid = true;
     }
 }
-
 
             else if(firstCharacter=='1' || firstCharacter=='2' 
               || firstCharacter=='3' || firstCharacter=='4'){
@@ -91,23 +115,25 @@ public class PickedCardsView implements Serializable {
     }
     
     private cards cards = new cards();
-    public void cardsPicked(){
+    public void cardsPicked() throws MenuException {
         long startTime = System.currentTimeMillis();
         String cardPicked;
         String alreadyMatched[] = new String[25];
         String tempValue[] = new String [2];
-        int cardValue[] = new int [2];
+            int cardValue[] = new int [2];
             int cardSpotOne = 0;
             int counter = 0;
             int q = 0;
         while(!"aaa".equals(alreadyMatched[23])){
+            
         cardPicked = getInput();
+       
             tempValue[q] = cardPicked;
                 q = q + 1;
             for (int y = 0; y < 24; y = y + 1){
                 if(cardPicked.equals(alreadyMatched[y])){
                
-               System.out.println("That Card was already chosen, try again.");
+               System.out.println("That card was already chosen, try again.");
                     q = 0;
                         cardPicked = getInput();
                             tempValue[q] = cardPicked;

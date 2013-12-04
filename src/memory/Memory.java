@@ -20,6 +20,8 @@ public class Memory implements Serializable {
             + "If all cards are successfully matched\n" +
               "within the time limit, the player progresses to the next level.";
     public static void main(String[] args) {
+        
+        try{
         Memory myGame = new Memory();
         myGame.getName();
         myGame.displayInstructions();
@@ -43,7 +45,20 @@ public class Memory implements Serializable {
         tellScore.averageTime();
         myGame.displayHelp();
         myGame.displayBoardOptions(); 
+            
+        }
+        
+        catch(Throwable ex){
+          System.out.println("Unexpected error: " + ex.getMessage());
+          System.out.println(ex.getStackTrace().toString());
+            
+        }
+        
+        finally{
+            
+        } 
     }
+    
     public static HelpMenuView getHelpMenu(){
         return Memory.helpMenu;
     }

@@ -54,7 +54,7 @@ public class BoardMenuView extends Menu implements Serializable, EnterInfo {
     }
     @Override
     // display the help menu and get the end users input selections
-    public void getInput() {       
+    public void getInput () {       
         
         String gameStatus = "PLAYING";
         do {
@@ -80,8 +80,8 @@ public class BoardMenuView extends Menu implements Serializable, EnterInfo {
                     gameStatus = "QUIT";
             }
         } 
-        while (!gameStatus.equals("QUIT"));  
-    
+            while (!gameStatus.equals("QUIT"));  
+          
     }
 }
     
