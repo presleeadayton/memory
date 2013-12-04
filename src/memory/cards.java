@@ -1,5 +1,6 @@
 package memory;
 
+import memory.supers.SuperExampleNathan;
 import java.io.Serializable;
 
 

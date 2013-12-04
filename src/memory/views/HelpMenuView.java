@@ -2,11 +2,12 @@ package memory.views;
 
 import java.io.Serializable;
 import java.util.Scanner;
-import memory.BoardMenuControl;
-import memory.CardMenuControl;
-import memory.HelpMenuControl;
+import memory.controls.BoardMenuControl;
+import memory.controls.CardMenuControl;
+import memory.controls.HelpMenuControl;
 import memory.Menu;
 import memory.interfaces.EnterInfo;
+import memory.enums.HelpMenuEnums;
 
 public class HelpMenuView extends Menu implements Serializable, EnterInfo{
             

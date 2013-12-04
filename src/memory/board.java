@@ -1,5 +1,6 @@
 package memory;
 
+import memory.supers.SuperExamplePreslee;
 import java.io.Serializable;
 
 public class board extends SuperExamplePreslee implements Serializable {

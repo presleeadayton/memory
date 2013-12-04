@@ -1,9 +1,10 @@
-package memory;
+package memory.controls;
 
 import memory.views.CardMenuView;
 import memory.views.HelpMenuView;
 import memory.views.BoardMenuView;
 import java.io.Serializable;
+import memory.Memory;
 
 
 public class HelpMenuControl implements Serializable {

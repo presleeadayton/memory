@@ -1,5 +1,5 @@
 
-package memory;
+package memory.supers;
 
 public abstract class SuperExamplePreslee {
     

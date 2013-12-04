@@ -2,14 +2,14 @@ package memory.views;
 
 import java.io.Serializable;
 import java.util.Scanner;
-import memory.BoardMenuControl;
-import memory.CardMenuControl;
-import memory.HelpMenuControl;
+import memory.controls.BoardMenuControl;
+import memory.controls.CardMenuControl;
+import memory.controls.HelpMenuControl;
 import memory.Menu;
 import memory.enums.BoardMenuEnums;
 import memory.interfaces.EnterInfo;
 
-public class BoardMenuView extends Menu implements Serializable, EnterInfo{
+public class BoardMenuView extends Menu implements Serializable, EnterInfo {
     
     private final static String[][] menuItems = {
         {"P", "Pause Game"}, 

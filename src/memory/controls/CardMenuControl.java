@@ -1,12 +1,14 @@
-package memory;
+package memory.controls;
 
 import memory.views.CardMenuView;
 import memory.views.HelpMenuView;
 import memory.views.BoardMenuView;
 import java.io.Serializable;
+import memory.Memory;
+import memory.interfaces.MenuControl;
 
 
-public class CardMenuControl implements Serializable {
+public class CardMenuControl implements Serializable, MenuControl {
 
     public CardMenuControl() {
         
