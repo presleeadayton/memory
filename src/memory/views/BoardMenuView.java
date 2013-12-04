@@ -1,20 +1,22 @@
-package memory;
+package memory.views;
 
 import java.io.Serializable;
 import java.util.Scanner;
+import memory.BoardMenuControl;
+import memory.CardMenuControl;
+import memory.HelpMenuControl;
+import memory.Menu;
+import memory.enums.BoardMenuEnums;
+import memory.interfaces.EnterInfo;
 
-public class HelpMenuView extends Menu implements Serializable{
-            
-   
+public class BoardMenuView extends Menu implements Serializable, EnterInfo{
+    
     private final static String[][] menuItems = {
-        {"B", "The board"}, 
-        {"G", "The memory game"},
-        {"C", "The cards"},
-        {"S", "The score"},
-        {"H", "The how to play"},
-        {"CM", "The Card Menu"},
-        {"BM", "The Board Menu"},
-        {"Q", "Quit Help"}        
+        {"P", "Pause Game"}, 
+        {"R", "Restart Game"},
+        {"C", "Change Card Type"},
+        {"H", "Help Menu"}, 
+        {"Q", "Quit Menu"}        
     };
     
     // Create instance of the HelpMenuControl (action) class
@@ -23,8 +25,8 @@ public class HelpMenuView extends Menu implements Serializable{
     private BoardMenuControl boardMenuControl = new BoardMenuControl();
     
     // default constructor
-    public HelpMenuView() {
-        super(HelpMenuView.menuItems);
+    public BoardMenuView() {
+        super(BoardMenuView.menuItems);
     } 
 
     public CardMenuControl getCardMenuControl() {
@@ -50,45 +52,36 @@ public class HelpMenuView extends Menu implements Serializable{
     public void setBoardMenuControl(BoardMenuControl boardMenuControl) {
         this.boardMenuControl = boardMenuControl;
     }
-    
-    // display the help menu and get the end users input selection
     @Override
-    public String getInput() {       
+    // display the help menu and get the end users input selections
+    public void getInput() {       
         
         String gameStatus = "PLAYING";
         do {
             this.display();
             
-            // get commaned entered
             String command = this.getCommand();
+            // get commaned entered
             switch (command) {
-                case "B":
-                    this.helpMenuControl.displayBoardHelp();
+                
+                case "P":
+                    this.boardMenuControl.pauseGame();
                     break;
-                case "G":
-                    this.helpMenuControl.displayGameHelp();
+                case "R":
+                    this.boardMenuControl.restartGame();
                     break;
                 case "C":
-                    this.helpMenuControl.displayCardHelp();
-                    break;                  
-                case "S":
-                    this.helpMenuControl.displayScoreHelp();
-                    break;
-                case "H":
-                    this.helpMenuControl.displayHowToPlayHelp();
-                    break;
-                case "CM":
                     cardMenuControl.displayCardMenu();
                     break;
-                 case "BM":
-                    boardMenuControl.displayBoardMenu();
+                case "H":
+                    boardMenuControl.displayHelpMenu();
                     break;
                 case "Q": 
-                    return "QUIT";
+                    gameStatus = "QUIT";
             }
         } 
         while (!gameStatus.equals("QUIT"));  
-        
-         return gameStatus;
+    
     }
 }
+    

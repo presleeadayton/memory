@@ -2,8 +2,9 @@ package memory;
 
 
 import java.util.Scanner;
+import memory.interfaces.DisplayInfo;
 
-public abstract class Menu {
+public class Menu implements DisplayInfo {
 
     private String[][] menuItems = null;
 
@@ -14,8 +15,6 @@ public abstract class Menu {
         this();
         this.menuItems = menuItems;
     }
- 
-    public abstract String getInput();
     
     public String[][] getMenuItems() {
         return menuItems;
@@ -25,7 +24,6 @@ public abstract class Menu {
         this.menuItems = menuItems;
     }
 
-    
     public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");

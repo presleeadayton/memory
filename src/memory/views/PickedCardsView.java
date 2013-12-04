@@ -1,9 +1,11 @@
-package memory;
+package memory.views;
 
 import java.io.Serializable;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Comparator;
+import memory.MemoryError;
+import memory.cards;
 
 public class PickedCardsView implements Serializable {
     

@@ -1,5 +1,8 @@
 package memory;
 
+import memory.views.CardMenuView;
+import memory.views.HelpMenuView;
+import memory.views.BoardMenuView;
 import java.io.Serializable;
 
 public class BoardMenuControl implements Serializable {

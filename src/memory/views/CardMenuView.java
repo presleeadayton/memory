@@ -1,9 +1,14 @@
-package memory;
+package memory.views;
 
 import java.io.Serializable;
 import java.util.Scanner;
+import memory.BoardMenuControl;
+import memory.CardMenuControl;
+import memory.HelpMenuControl;
+import memory.Menu;
+import memory.interfaces.EnterInfo;
 
-public class CardMenuView extends Menu implements Serializable {
+public class CardMenuView extends Menu implements Serializable, EnterInfo {
     
     /* We tried nesting right here but it broke the code on lines 44, 47, and 50. 
      * private class CardMenuControl {
@@ -29,7 +34,7 @@ public class CardMenuView extends Menu implements Serializable {
     
     // display the help menu and get the end users input selection
     @Override
-    public String getInput() {       
+    public void getInput() {       
         
       String gameStatus = "PLAYING";
         do {
@@ -54,12 +59,10 @@ public class CardMenuView extends Menu implements Serializable {
                     helpMenuControl.displayHelpMenu();
                     break;
                 case "Q": 
-                    return "QUIT";
+                    gameStatus =  "QUIT";
             }
         } 
         while (!gameStatus.equals("QUIT"));  
-        
-         return gameStatus;
     }
     
     public CardMenuControl getCardMenuControl() {

@@ -1,5 +1,9 @@
 package memory;
 
+import memory.views.CardMenuView;
+import memory.views.PickedCardsView;
+import memory.views.HelpMenuView;
+import memory.views.BoardMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -12,8 +16,9 @@ public class Memory implements Serializable {
     public static String name;
     public static String instructions = "This is the game of Memory! \n\n"
             + "The player turns over two cards at a time\n" +
-"trying to match all cards before the time runs out. If all cards are successfully matched\n" +
-"within the time limit, the player progresses to the next level.";
+              "trying to match all cards before the time runs out. "
+            + "If all cards are successfully matched\n" +
+              "within the time limit, the player progresses to the next level.";
     public static void main(String[] args) {
         Memory myGame = new Memory();
         myGame.getName();
