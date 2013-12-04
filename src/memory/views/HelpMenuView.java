@@ -8,6 +8,7 @@ import memory.controls.HelpMenuControl;
 import memory.Menu;
 import memory.interfaces.EnterInfo;
 import memory.enums.HelpMenuEnums;
+import memory.customExceptionClasses.HelpMenuException;
 
 public class HelpMenuView extends Menu implements Serializable, EnterInfo{
             
@@ -59,7 +60,7 @@ public class HelpMenuView extends Menu implements Serializable, EnterInfo{
     
     // display the help menu and get the end users input selection
     @Override
-    public void getInput() {       
+    public void getInput() /*throws HelpMenuException*/ {       
         
         String gameStatus = "PLAYING";
         do {
@@ -67,6 +68,15 @@ public class HelpMenuView extends Menu implements Serializable, EnterInfo{
             
             // get commaned entered
             String command = this.getCommand();
+            
+            //try{int choicelength = command.length();
+                //int randomnumber = 2;
+                //randomnumber = randomnumber/choicelength;
+            
+            //}
+            //catch (ArithmeticException exc){throw new HelpMenuException("Please enter a card set.");}
+            
+            
             switch (command) {
                 case "B":
                     this.helpMenuControl.displayBoardHelp();
