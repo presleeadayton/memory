@@ -6,6 +6,7 @@ import memory.views.HelpMenuView;
 import memory.views.BoardMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
+import memory.frames.MainFrame;
 
 public class Memory implements Serializable {
     private static final HelpMenuView helpMenu = new HelpMenuView();
@@ -15,13 +16,13 @@ public class Memory implements Serializable {
     //Instance variables
     public static String name;
     public static String instructions = "This is the game of Memory! \n\n"
-            + "The player turns over two cards at a time\n" +
-              "trying to match all cards before the time runs out. "
-            + "If all cards are successfully matched\n" +
-              "within the time limit, the player progresses to the next level.";
+            + "The player turns over two cards at a time trying to match all cards before the time runs out. "
+            + "If all cards are successfully matched within the time limit, the player continues to try to beat their best time.";
     public static void main(String[] args) {
+        MainFrame mainScreen = new MainFrame();
+        mainScreen.setVisible(true);
         
-        try{
+        /*try{
         Memory myGame = new Memory();
         myGame.getName();
         myGame.displayInstructions();
@@ -56,7 +57,7 @@ public class Memory implements Serializable {
         
         finally{
             
-        } 
+        } */
     }
     
     public static HelpMenuView getHelpMenu(){
