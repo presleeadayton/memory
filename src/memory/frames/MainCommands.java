@@ -14,4 +14,22 @@ public class MainCommands {
      MainFrame mainScreen = new MainFrame();
      mainScreen.setVisible(true);
     } 
+    
+    public void HelpMenu(){
+     
+     HelpMenu mainScreen = new HelpMenu();
+     mainScreen.setVisible(true);
+    }
+    
+    public void displayGame(){
+        
+     GameBoard game = new GameBoard();
+     game.setVisible(true);
+    }
+    
+     public void quitGame(){
+        
+     QuitRestart game = new QuitRestart();
+     game.setVisible(true);
+    }
 }
