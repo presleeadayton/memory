@@ -6,6 +6,7 @@ import memory.views.HelpMenuView;
 import memory.views.BoardMenuView;
 import java.io.Serializable;
 import java.util.Scanner;
+import memory.frames.GetNamesFrame;
 import memory.frames.MainFrame;
 
 public class Memory implements Serializable {
@@ -19,8 +20,8 @@ public class Memory implements Serializable {
             + "The player turns over two cards at a time trying to match all cards before the time runs out. "
             + "If all cards are successfully matched within the time limit, the player continues to try to beat their best time.";
     public static void main(String[] args) {
-        MainFrame mainScreen = new MainFrame();
-        mainScreen.setVisible(true);
+        GetNamesFrame getName = new GetNamesFrame();
+        getName.setVisible(true);
         
         /*try{
         Memory myGame = new Memory();

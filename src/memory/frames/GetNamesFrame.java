@@ -57,7 +57,6 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
         jLabel2.setText("Please enter your name:");
         jLabel2.setName("enterName"); // NOI18N
 
-        jTextField1.setText("jTextField1");
         jTextField1.setName("playersName"); // NOI18N
 
         jButton1.setText("Enter");
@@ -76,12 +75,12 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
             .add(jPanel2Layout.createSequentialGroup()
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel2Layout.createSequentialGroup()
-                        .add(107, 107, 107)
-                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
-                    .add(jPanel2Layout.createSequentialGroup()
                         .add(159, 159, 159)
-                        .add(jButton1)))
-                .addContainerGap(110, Short.MAX_VALUE))
+                        .add(jButton1))
+                    .add(jPanel2Layout.createSequentialGroup()
+                        .add(109, 109, 109)
+                        .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -90,9 +89,9 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
                 .add(jLabel2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 30, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 36, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
+                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jButton1)
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
@@ -114,7 +113,10 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String playerName = playersName.toString();
+        //String playerName = playersName.toString();
+        this.dispose();
+        MainCommands CardMenu = new MainCommands();
+        CardMenu.MainMenu();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
