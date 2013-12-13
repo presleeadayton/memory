@@ -184,8 +184,6 @@ public class PickedCardsView implements Serializable {
             if(secondCharacter2=='1' || secondCharacter2=='2' 
               || secondCharacter2=='3' || secondCharacter2=='4'){
                 
-              
-                
             }
             }        
     }
@@ -209,20 +207,16 @@ public class PickedCardsView implements Serializable {
               || secondCharacter2=='C' || secondCharacter2=='c' 
               || secondCharacter2=='D' || secondCharacter2=='d' 
               || secondCharacter2=='E' || secondCharacter2=='e' 
-              || secondCharacter2=='F' || secondCharacter2=='f'){
-                
-               
+              || secondCharacter2=='F' || secondCharacter2=='f'){  
                 
             }
             }
     }
-}else{
+}
+            else{
                 String ErrorOne = ("Please enter a valid set.");
                 return ErrorOne;
             }
-            
-            
-            
             
         //cardPicked = getInput(choice1, choice2);
        
@@ -368,7 +362,7 @@ public class PickedCardsView implements Serializable {
                    x = 100;
                    
                    cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
                  
                 }   
                 else if("c1".equals(choice2) || "C1".equals(choice2) || 
@@ -378,7 +372,7 @@ public class PickedCardsView implements Serializable {
                    x = 200;
                    
                     cardValue[cardSpotOne] = x;
-                    cardSpotOne = cardSpotOne + 1;
+                    cardSpotOne = 0;
                
                 }   
                 else if("e1".equals(choice2) || "E1".equals(choice2) || 
@@ -388,7 +382,7 @@ public class PickedCardsView implements Serializable {
                    x = 300;
                  
                    cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
              
                   }   
                  else if("c2".equals(choice2) || "C2".equals(choice2) || 
@@ -398,7 +392,7 @@ public class PickedCardsView implements Serializable {
                    x = 500;
                    
                    cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
                 
                 } 
                 else if("a3".equals(choice2) || "A3".equals(choice2) || 
@@ -408,7 +402,7 @@ public class PickedCardsView implements Serializable {
                    x = 700;
                    
                    cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
             
                 }   
                 else if("c3".equals(choice2) || "C3".equals(choice2) || 
@@ -418,7 +412,7 @@ public class PickedCardsView implements Serializable {
                    x = 800;
                    
                    cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
                    
                 }   
                 else if("e3".equals(choice2) || "E3".equals(choice2) || 
@@ -428,7 +422,7 @@ public class PickedCardsView implements Serializable {
                    x = 900;
                    
                    cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
 
                 }   
                 else if("a4".equals(choice2) || "A4".equals(choice2) || 
@@ -438,7 +432,7 @@ public class PickedCardsView implements Serializable {
                    x = 1000;
                    
                    cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
   
                 }   
                 else if("c4".equals(choice2) || "C4".equals(choice2) || 
@@ -448,7 +442,7 @@ public class PickedCardsView implements Serializable {
                    x = 1100;
                    
                   cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
                     
                 }   
                 else if("e4".equals(choice2) || "E4".equals(choice2) || 
@@ -458,7 +452,7 @@ public class PickedCardsView implements Serializable {
                    x = 1200;
                     
                    cardValue[cardSpotOne] = x;
-                   cardSpotOne = cardSpotOne + 1;
+                   cardSpotOne = 0;
                    
           }
                 
