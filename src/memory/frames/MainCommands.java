@@ -1,13 +1,15 @@
 package memory.frames;
 
 import memory.cards;
+import memory.views.PickedCardsView;
 
 public class MainCommands {
     
-    public void cardDisplay(){
+    public String cardDisplay(){
     
     cards cardDisplay = new cards();
-    cardDisplay.getCards();
+    String temp = cardDisplay.getCards();
+    return temp;
     }
     public void MainMenu(){
     
@@ -32,4 +34,11 @@ public class MainCommands {
      QuitRestart game = new QuitRestart();
      game.setVisible(true);
     }
+     
+    public String cardsPicked(String choice1, String choice2){
+        
+     PickedCardsView cardPicked = new PickedCardsView();
+     String Response = cardPicked.cardsPicked(choice1, choice2);
+     return Response;
+    } 
 }

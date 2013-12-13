@@ -23,9 +23,9 @@ public class QuitRestart extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
-        jLabel1.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Optima", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Memory Game");
@@ -44,8 +44,10 @@ public class QuitRestart extends javax.swing.JFrame {
                 .addContainerGap(36, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Optima", 0, 13)); // NOI18N
         jButton1.setText("Quit Game");
         jButton1.setName("quitGame"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -54,6 +56,8 @@ public class QuitRestart extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(255, 255, 255));
+        jButton3.setFont(new java.awt.Font("Optima", 0, 13)); // NOI18N
         jButton3.setText("Go Back to Game");
         jButton3.setName("backToGame"); // NOI18N
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -69,9 +73,9 @@ public class QuitRestart extends javax.swing.JFrame {
             .add(jPanel2Layout.createSequentialGroup()
                 .add(79, 79, 79)
                 .add(jButton1)
-                .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
+                .add(18, 18, 18)
                 .add(jButton3)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(70, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)

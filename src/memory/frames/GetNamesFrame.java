@@ -28,11 +28,11 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 204));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setToolTipText("");
         jPanel1.setName("jlName"); // NOI18N
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Optima", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Memory Game");
@@ -51,17 +51,20 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(0, 102, 204));
-        jPanel2.setForeground(new java.awt.Color(51, 51, 255));
+        jPanel2.setBackground(new java.awt.Color(0, 204, 204));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
         jPanel2.setName("jpForm"); // NOI18N
 
+        jLabel2.setFont(new java.awt.Font("Optima", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Please enter your name:");
+        jLabel2.setText("  Please enter your name:");
         jLabel2.setName("enterName"); // NOI18N
 
         jTextField1.setName("playersName"); // NOI18N
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setFont(new java.awt.Font("Optima", 0, 13)); // NOI18N
         jButton1.setText("Enter");
         jButton1.setName("jbSave"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +77,6 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jLabel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .add(jPanel2Layout.createSequentialGroup()
                 .add(jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
                     .add(jPanel2Layout.createSequentialGroup()
@@ -84,6 +86,7 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
                         .add(109, 109, 109)
                         .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 183, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(108, Short.MAX_VALUE))
+            .add(org.jdesktop.layout.GroupLayout.TRAILING, jLabel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -94,7 +97,7 @@ public class GetNamesFrame extends javax.swing.JFrame implements ActionListener 
                 .add(jTextField1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 36, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.UNRELATED)
                 .add(jButton1)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
